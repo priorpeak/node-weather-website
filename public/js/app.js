@@ -21,9 +21,6 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = 'Sorry, an error occurred when fetching the data.'
                 messageTwo.textContent = ''
             } else {
-                console.log(data.location)
-                console.log(data.forecast)
-
                 messageOne.textContent = data.location
                 messageTwo.textContent = data.forecast
             }

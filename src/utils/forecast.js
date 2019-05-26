@@ -9,7 +9,7 @@ const forecast = (long, lat, callback) => {
         } else if (body.error) {
             callback('Invalid coordinates. Try another search.', undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + ` It is currently ${body.currently.temperature} degrees out, with a high of ${body.daily.data[0].temperatureMin} and a low of ${body.daily.data[0].temperatureMax}. There is a ${body.currently.precipProbability}% chance of rain.`)
+            callback(undefined, body.daily.data[0].summary + ` It is currently ${Math.round(body.currently.temperature)} degrees out, with a high of ${Math.round(body.daily.data[0].temperatureMin)} and a low of ${Math.round(body.daily.data[0].temperatureMax)}. There is a ${body.currently.precipProbability}% chance of rain.`)
         }
     })
 }

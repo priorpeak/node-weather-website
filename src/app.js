@@ -34,7 +34,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        text: 'Alex Prior is a computer engineering major at Boston University with experience in node.js, python, MATLAB, HTML, and CSS.'
+        text: 'Alex Prior is a computer engineering major at Boston University with experience in node.js, python, MATLAB, HTML, and CSS.',
         name: 'Alex Prior'
     })
 })
